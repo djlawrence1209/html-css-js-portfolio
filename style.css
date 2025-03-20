@@ -259,6 +259,21 @@ section {
     margin-top: 2rem;
 }
 
+/* Adding project grid layout styling for the "Projects" section */
+#projects .about-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+#projects .details-container {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    min-width: 300px;
+    max-width: 500px;
+}
+
 .about-details-container {
     justify-content: center;
     flex-direction: column;
@@ -321,6 +336,12 @@ section {
     flex-direction: column;
 }
 
+/* Adjust spacing for the skills section */
+#experience .about-containers {
+    gap: 3rem; /* Increase gap between language and tools containers */
+    justify-content: center;
+}
+
 .article-container {
     display: flex;
     text-align: initial;
@@ -330,11 +351,40 @@ section {
     justify-content: space-around;
 }
 
+#projects .article-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+
 article {
     display: flex;
     width: 10rem;
     justify-content: space-around;
     gap: 0.5rem;
+}
+
+/* Adding specific styling for the languages and tools sections */
+#experience .details-container:nth-child(1) article,
+#experience .details-container:nth-child(2) article {
+    width: 7rem;
+    margin-bottom: 0.5rem;
+}
+
+#experience .details-container:nth-child(1) .article-container,
+#experience .details-container:nth-child(2) .article-container {
+    gap: 1.5rem;
+}
+
+#experience .details-container:nth-child(1) h3,
+#experience .details-container:nth-child(2) h3 {
+    font-size: 0.9rem;
+}
+
+/* Making the proficiency labels smaller in the languages section */
+#experience .details-container:nth-child(1) p {
+    font-size: 0.8rem;
 }
 
 article .icon {
@@ -345,6 +395,8 @@ article .icon {
 
 #projects {
     position: relative;
+    height: auto;
+    min-height: 96vh;
 }
 
 .color-container {
@@ -354,13 +406,35 @@ article .icon {
 
 .project-img {
     border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
 }
 
 .project-title {
     margin: 1rem;
     color: black;
+}
+
+/* Technology badges styling */
+.tech-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-badge {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
 }
 
 .project-btn {
